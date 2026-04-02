@@ -13,7 +13,7 @@ Our group TA is named Aaron. He likes playing multiplayer first-person shooter g
 
 
 ### Activity 2
-Put your activity 2 image here. REMOVE THIS INSTRUCTIONAL TEXT.
+![c22efe45c4a44ebef737ab5746843deb](https://github.com/user-attachments/assets/ecde11ab-02dc-4f21-87cc-f5cf31f20166)
 
 
 ## W2
