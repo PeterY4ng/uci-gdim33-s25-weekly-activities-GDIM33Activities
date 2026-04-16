@@ -17,6 +17,7 @@ Our group TA is named Aaron. He likes playing multiplayer first-person shooter g
 
 
 ## W2
-Write your W2 Devlog here.
+<img width="1440" height="1002" alt="image" src="https://github.com/user-attachments/assets/9e0cbc5c-45e1-48c5-a747-5716941f052b" />
+
 
 Continue adding additional headers below this one for future weeks and future activities.
