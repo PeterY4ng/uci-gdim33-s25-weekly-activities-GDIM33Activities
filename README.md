@@ -16,7 +16,7 @@ Our group TA is named Aaron. He likes playing multiplayer first-person shooter g
 ![c22efe45c4a44ebef737ab5746843deb](https://github.com/user-attachments/assets/ecde11ab-02dc-4f21-87cc-f5cf31f20166)
 
 
-## W2
+## W3
 <img width="1440" height="1002" alt="image" src="https://github.com/user-attachments/assets/9e0cbc5c-45e1-48c5-a747-5716941f052b" />
 
 This avoids hard-coded strings. If I need to change the event name later, I only have to modify the value of this single variable instead of searching everywhere to update every place that triggers the event. This makes the project easier to maintain and less prone to errors.
@@ -27,3 +27,13 @@ The concept of game states is highly relevant. My game has two distinct modes: c
 
 
 Continue adding additional headers below this one for future weeks and future activities.
+
+## W4
+### Activity 1
+Playtest groupmates: Ruichen Ma, Alvin Wang, Gong Chen, Ziyue Yang(me)
+
+In this playtest session, I have completed the basic dungeon map layout for my game. I also placed many jar obstacles inside the scene. Some jars can be destroyed normally by the player, while other jars cannot be broken at the moment. This issue is caused by small code errors, and I will fix these bugs in the next development stage.
+I told the playtester the basic controls in advance. The player uses W, S, A, D to move the character, and the Spacebar is the interaction key to interact with objects and break jars. During the playtest, the tester quickly understood all the controls. The player could move smoothly using WASD and successfully use the Spacebar to break all destroyable jars. The basic movement and interaction work well with no major problems.
+However, my current Vertical Slice does not have enemies, objectives, or a clear game ending condition yet. After the tester broke all the destructible jars in the scene, there was nothing left to do in the game. The gameplay experience was short, and there was no clear gameplay loop or goal. In the next step, I will add basic enemies, simple level objectives, and a basic ending system to improve the complete playable experience.
+
+### Activity 2
