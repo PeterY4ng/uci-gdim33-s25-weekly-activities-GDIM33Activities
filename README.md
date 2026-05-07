@@ -51,11 +51,13 @@ During this session, I mainly built and integrated the animation system for the 
 
 ## W6
 ### Activity 1
-Since Milestone 1, I have optimized my character walking animations. Now my character has four different walking animations for the four movement directions respectively.
-I did playtesting to find bugs in my current game content and discovered several issues. Sometimes the character gets stuck in a certain animation state. For example, even after stopping movement, it still keeps playing the last directional walking animation.
-There are also problems with scene collision in some maps. Some areas look like walls that the player should not pass through, but the character can clip through them when moving at a certain angle.
-
+Since Milestone 1, I have optimized my character walking animations. Now my character has four different walking animations for the four movement directions respectively. 
 https://ziyue-yang.itch.io/gdim33ms2
+
+My goal: I did playtesting to find bugs in my current game content and discovered several issues. 
+
+I found that sometimes the character gets stuck in a certain animation state. For example, even after stopping movement, it still keeps playing the last directional walking animation.
+There are also problems with scene collision in some maps. Some areas look like walls that the player should not pass through, but the character can clip through them when moving at a certain angle.
 
 ### Activity 2
 1. Because the values of the RGB channels are stored in the range of 0.0 to 1.0, the Multiply setting of the Blend node multiplies each corresponding channel value of the two input colors to produce the new color. When multiplying two values between 0 and 1, the result will always be smaller than both of the original values. This lowers the brightness of every channel, making the overall color darker. 
