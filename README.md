@@ -48,3 +48,17 @@ However, in practical development and application, there is a significant soft e
 
 ## W5
 During this session, I mainly built and integrated the animation system for the player character. I downloaded the art assets for the character’s four-direction movement online and imported them into Unity. Then, I created a basic animation state machine in the Animator, including the default idle state and animation states for moving up, down, left, and right. Next, I used Visual Scripting to link the player’s WASD input to the transition conditions in the animation state machine: when the player presses the W key, the character switches to the upward movement animation; pressing S switches to the downward movement animation; pressing A switches to the leftward movement animation; and pressing D switches to the rightward movement animation, achieving real-time synchronization between the character’s movement direction and its visual animation.
+
+## W6
+### Activity 1
+Since Milestone 1, I have optimized my character walking animations. Now my character has four different walking animations for the four movement directions respectively.
+I did playtesting to find bugs in my current game content and discovered several issues. Sometimes the character gets stuck in a certain animation state. For example, even after stopping movement, it still keeps playing the last directional walking animation.
+There are also problems with scene collision in some maps. Some areas look like walls that the player should not pass through, but the character can clip through them when moving at a certain angle.
+
+https://ziyue-yang.itch.io/gdim33ms2
+
+### Activity 2
+1. Because the values of the RGB channels are stored in the range of 0.0 to 1.0, the Multiply setting of the Blend node multiplies each corresponding channel value of the two input colors to produce the new color. When multiplying two values between 0 and 1, the result will always be smaller than both of the original values. This lowers the brightness of every channel, making the overall color darker. 
+2. The resulting value will be more translucent than either of the original values. Since Alpha values are stored in the range of 0.0 to 1.0, multiplying two values in this range will always produce a result that is smaller than both inputs. A smaller Alpha value corresponds to higher transparency, so the final blended result will be more see-through.
+3. The UV coordinates come from the 3D model itself. When a model is created in 3D software (such as Blender or Maya), artists "unwrap" the model and assign UV coordinates to each vertex. These coordinates are stored within the model file. When Unity imports the model, it passes this UV data to the shader.
+4. I find it really exciting. It’s cool to see how simple math operations like addition and multiplication can completely change the look of a color or texture. This hands-on way of manipulating visuals with logic makes me want to learn more about shader programming.
