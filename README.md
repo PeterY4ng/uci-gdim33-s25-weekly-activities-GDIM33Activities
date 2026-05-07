@@ -51,7 +51,8 @@ During this session, I mainly built and integrated the animation system for the 
 
 ## W6
 ### Activity 1
-Since Milestone 1, I have optimized my character walking animations. Now my character has four different walking animations for the four movement directions respectively. 
+Since Milestone 1, I have optimized my character’s walking animations. The character now has four distinct walking animations for four different movement directions.
+I also added the first weapon, a pistol. Left-clicking with the pistol equipped fires automatically moving bullets to attack enemies.
 https://ziyue-yang.itch.io/gdim33ms2
 
 My goal: I did playtesting to find bugs in my current game content and discovered several issues. 
