@@ -65,3 +65,12 @@ There are also problems with scene collision in some maps. Some areas look like 
 2. The resulting value will be more translucent than either of the original values. Since Alpha values are stored in the range of 0.0 to 1.0, multiplying two values in this range will always produce a result that is smaller than both inputs. A smaller Alpha value corresponds to higher transparency, so the final blended result will be more see-through.
 3. The UV coordinates come from the 3D model itself. When a model is created in 3D software (such as Blender or Maya), artists "unwrap" the model and assign UV coordinates to each vertex. These coordinates are stored within the model file. When Unity imports the model, it passes this UV data to the shader.
 4. I find it really exciting. It’s cool to see how simple math operations like addition and multiplication can completely change the look of a color or texture. This hands-on way of manipulating visuals with logic makes me want to learn more about shader programming.
+
+## W7
+1. The data for the Vertex Color node comes directly from the Shiba model itself. Artists paint colors for each vertex during modeling, and this data is stored in the mesh file along with position, normals and other information.
+2. This is caused by automatic GPU interpolation. A triangle only has colors at its three vertices, and all pixels in between are automatically blended, so there are no sharp edges between different colors.
+3. Vertex color detail is limited by the number of vertices, while textures are pixel-level, so they look much sharper. Vertex color is great for performance, perfect for low-cost shading, baked lighting, and simple effects like characters turning red when hit.
+4. Yes, there's a problem with the normals on the back-left leg. The normal debug shader converts normal directions to colors, which should transition smoothly, but that area looks clearly wrong.
+5. We can use it to debug UV coordinates. Map U to red and V to green, and you can instantly see stretching, overlapping, or seams, which is way easier than checking textures.
+6. Because the light direction and normal direction are defined oppositely. Light direction points toward the object, while normals point outward, so the dot product is reversed, making lit areas dark and unlit areas bright.
+7. Additive blending is perfect for fire effects. It adds the fire color to the background, making bright areas stand out, and black areas become completely transparent with no ugly edges.
