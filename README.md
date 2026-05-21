@@ -74,3 +74,16 @@ There are also problems with scene collision in some maps. Some areas look like 
 5. We can use it to debug UV coordinates. Map U to red and V to green, and you can instantly see stretching, overlapping, or seams, which is way easier than checking textures.
 6. Because the light direction and normal direction are defined oppositely. Light direction points toward the object, while normals point outward, so the dot product is reversed, making lit areas dark and unlit areas bright.
 7. Additive blending is perfect for fire effects. It adds the fire color to the background, making bright areas stand out, and black areas become completely transparent with no ugly edges.
+
+## W8
+Activity 1: playtest goals
+
+
+Activity 1: playtest notes
+
+
+Activity 2B
+1. How is the Fraction node used to animate the shine effect?
+2. Why does the Shine texture for the ShinySprite shader need to be BLACK by default? Consider that we're using the Add Node to combine it with the original texture...
+3. Why isn't the building texture we used in the ShaderGraph applied to all of the Sprites that use the ShinySprite shader?
+4. Why do we multiply fraction(time * ShineSpeed) with the speed variable inside the fraction instead of outside- as in fraction(time)*speed? If you're not sure, try modifying your graph to multiply the Fraction node with ShineSpeed instead of multiplying Time with ShineSpeed, and see what happens.
