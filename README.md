@@ -77,9 +77,11 @@ There are also problems with scene collision in some maps. Some areas look like 
 
 ## W8
 Activity 1: playtest goals
+
 During this playtest, my main testing objective is to examine the newly added function that gold coins drop after defeating small enemies, which has been implemented since I submitted Milestone 2.
 
 Activity 1: playtest notes
+
 I found occasional glitches during the test. Some small enemies failed to drop gold coins for no reason, and some dropped coins could not be picked up. After one class of adjustments, I fixed all the bugs. All enemies can now drop collectible gold coins normally. I also added a rotating animation to the coins, which keeps spinning in place after spawning and makes the game more vivid and appealing.
 
 Activity 2B
