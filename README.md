@@ -77,13 +77,15 @@ There are also problems with scene collision in some maps. Some areas look like 
 
 ## W8
 Activity 1: playtest goals
-
+During this playtest, my main testing objective is to examine the newly added function that gold coins drop after defeating small enemies, which has been implemented since I submitted Milestone 2.
 
 Activity 1: playtest notes
-
+I found occasional glitches during the test. Some small enemies failed to drop gold coins for no reason, and some dropped coins could not be picked up. After one class of adjustments, I fixed all the bugs. All enemies can now drop collectible gold coins normally. I also added a rotating animation to the coins, which keeps spinning in place after spawning and makes the game more vivid and appealing.
 
 Activity 2B
-1. How is the Fraction node used to animate the shine effect?
-2. Why does the Shine texture for the ShinySprite shader need to be BLACK by default? Consider that we're using the Add Node to combine it with the original texture...
-3. Why isn't the building texture we used in the ShaderGraph applied to all of the Sprites that use the ShinySprite shader?
-4. Why do we multiply fraction(time * ShineSpeed) with the speed variable inside the fraction instead of outside- as in fraction(time)*speed? If you're not sure, try modifying your graph to multiply the Fraction node with ShineSpeed instead of multiplying Time with ShineSpeed, and see what happens.
+1. The fractional node extracts the decimal part of its input, turning any value into a repeating value between 0.0 and 1.0. We multiply the ever-increasing time value by the shine speed and feed it into the fractional node to get a continuously looping value. This value offsets the UV coordinates of the shine texture, making it scroll across the sprite surface. When combined with the main texture via an Add node, it creates the dynamic shine effect.
+2. Because we use an Add node to blend textures. Black has an RGBA value of (0,0,0,0), so adding it to any color leaves the original color unchanged. This way only the bright shine parts on ShineTex take effect, and other areas don't affect the sprite's original appearance. If it defaulted to another color, the entire sprite would be brightened or even overexposed.
+3. Unity's SpriteRenderer component automatically assigns its own attached sprite texture to the "MainTex" property in the shader, and it overrides any default value set in ShaderGraph. The building texture we set in ShaderGraph is just the default value, which only shows up when the SpriteRenderer has no sprite attached.
+4. Multiplying time by speed first then taking the fractional part ensures the output is always between 0.0 and 1.0, making the animation loop smoothly. If we take the fractional part first then multiply by speed, when the speed is greater than 1, the output will exceed 1.0. UV coordinates over 1.0 jump back to 0.0, causing obvious stutters and jumps in the animation instead of a smooth scroll.
+
+## W9
