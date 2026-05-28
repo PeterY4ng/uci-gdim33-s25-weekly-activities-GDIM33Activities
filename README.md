@@ -95,15 +95,18 @@ Activity 2B
 
 1.2
 Effect 1: Breach & Astra Concussion Screen Effect
+<img width="1970" height="1279" alt="1354d94ee635ed1791a5915df62054e9" src="https://github.com/user-attachments/assets/6153257e-bafa-4804-9614-a615c578ab96" />
 
 Effect type: This is a full-screen post-processing effect that applies to the whole screen, not individual object materials.
 Simple features: The screen gets distorted and has colored double images to simulate the player being stunned.
 Activation/Deactivation: This effect turns on automatically when the player is inside the area of Breach's Aftershock or Astra's Gravity Well. Breach's concussion lasts about 2.5 seconds, Astra's lasts about 2 seconds, and it turns off by itself when the time is up. Different abilities have slightly different strength and duration.
 
 Effect 2: Marked Enemy Outline Highlight
+<img width="2556" height="1179" alt="7bc74320f25bb69f51624c0d065f99d7" src="https://github.com/user-attachments/assets/64ceef2b-3ffa-4187-ae6f-80fdc1f24adb" />
 
 Effect type: This is a Renderer Feature, not post-processing or individual material modification.
 Simple features: Marked enemies get a colored outline that you can see through walls.
 Activation/Deactivation: When a player detects an enemy with an ability (like Sova's Recon Bolt or Cypher's Camera), the game moves that enemy to a special "Marked Enemy" layer. The renderer automatically draws outlines for all enemies in this layer. The mark lasts about 2-3 seconds, or until the enemy dies, then it gets moved back to the normal layer and the outline disappears.
+
 
 2. 
