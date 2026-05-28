@@ -91,3 +91,19 @@ Activity 2B
 4. Multiplying time by speed first then taking the fractional part ensures the output is always between 0.0 and 1.0, making the animation loop smoothly. If we take the fractional part first then multiply by speed, when the speed is greater than 1, the output will exceed 1.0. UV coordinates over 1.0 jump back to 0.0, causing obvious stutters and jumps in the animation instead of a smooth scroll.
 
 ## W9
+1.1 We chose Valorant for this analysis. It's a 5v5 tactical shooter where almost all important visual feedback is tied to agent abilities. It has tons of gameplay-triggered rendering effects.
+
+1.2
+Effect 1: Breach & Astra Concussion Screen Effect
+
+Effect type: This is a full-screen post-processing effect that applies to the whole screen, not individual object materials.
+Simple features: The screen gets distorted and has colored double images to simulate the player being stunned.
+Activation/Deactivation: This effect turns on automatically when the player is inside the area of Breach's Aftershock or Astra's Gravity Well. Breach's concussion lasts about 2.5 seconds, Astra's lasts about 2 seconds, and it turns off by itself when the time is up. Different abilities have slightly different strength and duration.
+
+Effect 2: Marked Enemy Outline Highlight
+
+Effect type: This is a Renderer Feature, not post-processing or individual material modification.
+Simple features: Marked enemies get a colored outline that you can see through walls.
+Activation/Deactivation: When a player detects an enemy with an ability (like Sova's Recon Bolt or Cypher's Camera), the game moves that enemy to a special "Marked Enemy" layer. The renderer automatically draws outlines for all enemies in this layer. The mark lasts about 2-3 seconds, or until the enemy dies, then it gets moved back to the normal layer and the outline disappears.
+
+2. 
