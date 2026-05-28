@@ -109,4 +109,5 @@ Simple features: Marked enemies get a colored outline that you can see through w
 Activation/Deactivation: When a player detects an enemy with an ability (like Sova's Recon Bolt or Cypher's Camera), the game moves that enemy to a special "Marked Enemy" layer. The renderer automatically draws outlines for all enemies in this layer. The mark lasts about 2-3 seconds, or until the enemy dies, then it gets moved back to the normal layer and the outline disappears.
 
 
-2. 
+2. In this class, with the TA's help, I made a sparkling effect for the coins dropped by defeated monsters in my game. I created the effect using Unity's Shader Graph, so the coin will sparkle periodically while keeping its original rotation animation.
+The TA explained the core logic to me: I use a Section node that only outputs values between 0 and 1, multiply it with the golden light color I set, then add the result to the coin's material. This way, the light effect disappears when the node outputs 0, and shows fully when it outputs 1. As the value changes periodically, the coin sparkles in a regular pattern.
