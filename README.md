@@ -110,3 +110,4 @@ Activation/Deactivation: When a player detects an enemy with an ability (like So
 
 2. In this class, with the TA's help, I made a sparkling effect for the coins dropped by defeated monsters in my game. I created the effect using Unity's Shader Graph, so the coin will sparkle periodically while keeping its original rotation animation.
 The TA explained the core logic to me: I use a Section node that only outputs values between 0 and 1, multiply it with the golden light color I set, then add the result to the coin's material. This way, the light effect disappears when the node outputs 0, and shows fully when it outputs 1. As the value changes periodically, the coin sparkles in a regular pattern.
+<img width="2559" height="1220" alt="d859ed3a788a72d5dfe68725e8f9b4cd" src="https://github.com/user-attachments/assets/ce350066-c30c-401c-bbdc-065dc62af69e" />
